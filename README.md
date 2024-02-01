@@ -6,14 +6,14 @@
 Для кодирования адреса: /IP
 
 Пример: 
-Запрос: http://localhost:8080/geocode/IP/Москва
-Ответ: 37.617698 55.755864
+Запрос: "http://localhost:8080/geocode/IP/Москва"
+Ответ: "37.617698 55.755864"
 
 Для кодирования IP: /address
 
 Пример: 
-Запрос: http://localhost:8080/geocode/address/49.106414 55.796127
-Ответ: Казань
+Запрос: "http://localhost:8080/geocode/address/49.106414 55.796127"
+Ответ: "Казань"
 
 Stack: Java, Spring(Boot, Data Jpa), My SQL, Docker(([aleksejmorozov](https://hub.docker.com/repositories/aleksejmorozov), docker images: appservice, dbservice)
 
