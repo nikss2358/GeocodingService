@@ -1,0 +1,22 @@
+version: '3'
+services:
+  dbservice:
+    image: 'mysql'
+    container_name: dbservice
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=53795469fuck
+      - MYSQL_DATABASE=geocodingservice
+      - MYSQL_PASSWORD=53795469fuck
+  app:
+    image: 'appservice'
+    ports:
+      - 8080:8080
+    build:
+      context: .
+    container_name: appservice
+    depends_on:
+      - dbservice
+    environment:
+      - SPRING_DATASOURCE_URL = jdbc:mysql://dbservice:3306/geocodingservice?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
